@@ -49,6 +49,8 @@ func newProvider(name string) (provider NewProvider, err error) {
 		provider = NewLiteralProvider
 	case "file":
 		provider = NewFileProvider
+	case "aws-secrets":
+		provider = NewAWSSecretsProvider
 	case "conjur":
 		provider = NewConjurProvider
 	case "vault":
