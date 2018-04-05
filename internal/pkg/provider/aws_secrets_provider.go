@@ -3,6 +3,7 @@ package provider
 import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/secretsmanager"
+	"github.com/aws/aws-sdk-go/aws"
 )
 
 // AWSSecretsProvider provides data values from AWS Secrets Manager.
@@ -19,7 +20,9 @@ func NewAWSSecretsProvider(name string) (provider Provider, err error) {
 	// shared configuration such as region, endpoint, and credentials. A
 	// Session should be shared where possible to take advantage of
 	// configuration and credential caching.
-	sess, err := session.NewSession()
+	sess, err := session.NewSessionWithOptions(session.Options{
+		SharedConfigState: session.SharedConfigEnable,
+	})
 	if err != nil {
 		return
 	}
@@ -40,7 +43,7 @@ func (p AWSSecretsProvider) Value(id string) (value []byte, err error) {
 	client := p.client
 
 	req, resp := client.GetSecretValueRequest(&secretsmanager.GetSecretValueInput{
-		SecretId: &id,
+		SecretId: aws.String(id),
 	})
 
 	err = req.Send()
