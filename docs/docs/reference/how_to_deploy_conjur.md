@@ -1,5 +1,5 @@
 ---
-title: Documentation
+title: Deploying the Secretless Broker
 id: how_to_deploy
 layout: docs
 description: Secretless Broker Documentation
