@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Announcing Secretless"
+title: "Introducing the Secretless Broker Open Source Beta"
 date: 2018-10-03 09:00:00 -0400
 author: Dustin Byrne
 categories: blog
