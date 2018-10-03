@@ -5,7 +5,7 @@ date: 2018-10-03 09:00:00 -0400
 author: Dustin Byrne
 categories: blog
 published: true
-excerpt: "CyberArk is incredibly pleased to announce Secretless, a new open source project that changes the way applications consume privileged credentials."
+excerpt: "CyberArk is incredibly pleased to announce the beta release of a new open source project, Secretless Broker. Secretless Broker makes secrets management seamless for developers by removing secrets from the application space altogether, so that applications built with Secretless Broker are leak-proof."
 ---
 
 CyberArk is incredibly pleased to announce the beta release of a new open source project, Secretless Broker. Secretless Broker makes secrets management seamless for developers by removing secrets from the application space altogether, so that applications built with Secretless Broker are leak-proof.
